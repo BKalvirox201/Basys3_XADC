@@ -76,6 +76,8 @@ Here is the final configuration
     <img src="../Images/ADC_Circ.png">
 </p>
 
+![](../Images/ADC_Circ.png "ADC Circuit")
+
 ### Recursive Filters – IIR filters
 In testing, the ADC had 4-6 counts of noise, the first digit was always completely lit-up and the second digit fluctuated by at least 1 or 2 bits. So, I dug out [DSP_Guide](https://dspguide.com) and implemented an IIR filter.
 
