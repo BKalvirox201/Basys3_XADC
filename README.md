@@ -6,7 +6,7 @@ The idea for this is a digital logic circuit implemented in an FPGA that produce
 ### Concept Diagram:
 
 <p align="center">
-    <img src="../Images/Cir_Concept.png">
+    <img src="[../Images/Cir_Concept.png](https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/Cir_Concept.png)">
 </p>
 
 First I made the electronics circuit for the pot, using the datasheet for the basys3 board I connected pins 7&8 on the pmod header to ground used the pins 1&2 as the two channels for the ADC – these feed to channels Aux6 and Aux14 on the FPGA.
