@@ -6,26 +6,23 @@ The idea for this is a digital logic circuit implemented in an FPGA that produce
 ### Concept Diagram:
 
 <p align="center">
-    <img src="[](https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/Cir_Concept.png)">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/Cir_Concept.png">
 </p>
-
-![Circuit_Concept_Image](https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/Cir_Concept.png)
-
 
 First I made the electronics circuit for the pot, using the datasheet for the basys3 board I connected pins 7&8 on the pmod header to ground used the pins 1&2 as the two channels for the ADC – these feed to channels Aux6 and Aux14 on the FPGA.
 
 <p align="center">
-    <img src="../Images/PMod_Headers.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/PMod_Headers.png">
 </p>
 <p align="center">
-    <img src="../Images/IO_BANK.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/IO_BANK.png">
 </p>
 
 ## Circuit
 The circuit looked like this. 
 
 <p align="center">
-    <img src="../Images/Actual_Circ.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/Actual_Circ.png">
 </p>
 
 Note that the 23k resistors is not a standard resistor value, I bought some 1% tolerance resistors from amazon that turned out to be more like 5% tolerance and so I used 2x22k resistors whose measured resistance was >23kOhm. This gave me almost the full maximum range on the ADC whilst keeping the maximum voltage seen at the terminals below 1V, which is the max voltage that ADC terminals are rated for according to the Artix-7 Datasheet.
@@ -41,7 +38,7 @@ Each digit receives a value in binary which can be converted into the correct bi
 Here is the circuit from the Basys3 datasheet.
 
 <p align="center">
-    <img src="../Images/7-segment-LED.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/7-segment-LED.png">
 </p>
 
 Then I wrote the binary to 4-digit decimal converter, this used the double dabble algorithm in a combinatorial implementation to convert the binary value into its respective digits. As the ADC was 12 bits, I only needed to represent values up to 8096 which meant I only needed 4 digits.
@@ -54,13 +51,13 @@ As there are 15 LEDS on the board, for a bar graph there are 16 combinations fro
 To use the ADC in the Xilinx FPGA, I used the IP block provided by Xilinx to interface with it. By reading the datasheet with its timing examples and some example implementations I found online. I created the IP block with the following settings.
 
 <p align="center">
-    <img src="../Images/ADC_Setup_1.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/ADC_Setup_1.png">
 </p><p align="center">
-    <img src="../Images/ADC_Setup_2.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/ADC_Setup_2.png">
 </p><p align="center">
-    <img src="../Images/ADC_Setup_3.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/ADC_Setup_3.png">
 </p><p align="center">
-    <img src="../Images/ADC_Setup_4.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/ADC_Setup_4.png">
 </p>
 
 #### ADC Buffer
@@ -76,10 +73,8 @@ This shows that at the end of each conversion, a pulse occurs at the EOC (End of
 Here is the final configuration
 
 <p align="center">
-    <img src="../Images/ADC_Circ.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/ADC_Circ.png">
 </p>
-
-![](../Images/ADC_Circ.png "ADC Circuit")
 
 ### Recursive Filters – IIR filters
 In testing, the ADC had 4-6 counts of noise, the first digit was always completely lit-up and the second digit fluctuated by at least 1 or 2 bits. So, I dug out [DSP_Guide](https://dspguide.com) and implemented an IIR filter.
@@ -92,17 +87,17 @@ Here are some of the simulation results. Note that I used a lower decimation val
 
 Beta = 0.5
 <p align="center">
-    <img src="../Images/IIR_05_05_DEC_500.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/IIR_05_05_DEC_500.png">
 </p>
 
 Beta = 0.25
 <p align="center">
-    <img src="../Images/IIR_025_075_DEC_500.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/IIR_025_075_DEC_500.png">
 </p>
 
 Beta = 0.125
 <p align="center">
-    <img src="../Images/IIR_0125_0875_DEC_500.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/IIR_0125_0875_DEC_500.png">
 </p>
 
 I chose a beta of 0.125 because it was the strongest of the filters but I could also make the frequency response higher if I needed to by reducing the decimation.
@@ -113,7 +108,7 @@ To design the advanced timer, I first looked at a diagram for a timer in a micro
 I removed all of the parts that I didn't need from the example. For example there was no need for a repetiton counter as I didn't need one.
 
 <p align="center">
-    <img src="../Images/Capture-Compare.png">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/Capture-Compare.png">
 </p>
 
 Overall design for the timer with it's capture compare was fairly simple. A clock divider feeds into a prescaler register which feeds into the timer register which increments. This value is then combinatorially compared with the value in the capture compare register, when it crosses the compare threshold the output of the PWM goes from high to low.
@@ -144,7 +139,7 @@ Heres a picture of the timing diagram for the advanced timer
 
 ### FPGA Circuit
 <p align="center">
-    <img src="../Images/Full_Schematic.pngg">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/Full_Schematic.png">
 </p>
 
 VIDEO!
