@@ -65,9 +65,17 @@ The data from the ADC is read out on a parallel data bus, however each channels 
 
 In order to figure out how to integrate the buffer with the ADC, I had to use this timing diagram.
 
-// INCLUDE ME
+<p align="center">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/XADC-continuous-sampling-mode.jpg">
+</p>
 
 This shows that at the end of each conversion, a pulse occurs at the EOC (End of Conversion) pin, which I can use as a clk for the registers in the buffer. The register the data was loaded into was determined by the value of "channel_out".
+
+Here is the timing diagram of the ADC and the buffer, I've simulated the ADC channels with having a sine and cosine signal on the two channels I am using. To generate the data for this I wrote a python program.
+
+<p align="center">
+    <img src="https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/ADC_Simulation.png">
+</p>
 
 #### Final configuration
 Here is the final configuration

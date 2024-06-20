@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-//Date        : Wed Jun 12 09:32:46 2024
+//Date        : Thu Jun 20 10:40:17 2024
 //Host        : L0343 running 64-bit major release  (build 9200)
 //Command     : generate_target WaveGen_wrapper.bd
 //Design      : WaveGen_wrapper

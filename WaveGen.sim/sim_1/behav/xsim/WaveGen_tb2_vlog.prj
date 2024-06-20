@@ -6,6 +6,7 @@ verilog xil_defaultlib  \
 "../../../../../SevSeg/SevSeg.srcs/sources_1/new/CLK_KHZ_100_50.v" \
 "../../../../WaveGen.srcs/sources_1/new/BarGraph.v" \
 "../../../../WaveGen.srcs/sources_1/new/Recursive_Filter.v" \
+"../../../../../PWM_Circuit/PWM_Circuit.srcs/sources_1/new/Advanced_Timer.v" \
 "../../../../WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Sseg_decoder_0_0/sim/WaveGen_Sseg_decoder_0_0.v" \
 "../../../../WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_xadc_wiz_0_0/WaveGen_xadc_wiz_0_0.v" \
 "../../../../WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_xlconstant_0_0/sim/WaveGen_xlconstant_0_0.v" \
@@ -15,6 +16,7 @@ verilog xil_defaultlib  \
 "../../../../WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_BarGraph_0_0/sim/WaveGen_BarGraph_0_0.v" \
 "../../../../WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Recursive_Filter_0_0/sim/WaveGen_Recursive_Filter_0_0.v" \
 "../../../../WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Recursive_Filter_1_0/sim/WaveGen_Recursive_Filter_1_0.v" \
+"../../../../WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Advanced_Timer_0_0/sim/WaveGen_Advanced_Timer_0_0.v" \
 "../../../../WaveGen.gen/sources_1/bd/WaveGen/sim/WaveGen.v" \
 
 sv xil_defaultlib  \

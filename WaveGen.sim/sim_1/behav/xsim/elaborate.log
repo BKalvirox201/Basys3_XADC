@@ -11,6 +11,8 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.ADC_Buff
 Compiling module xil_defaultlib.WaveGen_ADC_Buff_0_0
+Compiling module xil_defaultlib.Advanced_Timer(prescaler_value=2...
+Compiling module xil_defaultlib.WaveGen_Advanced_Timer_0_0
 Compiling module xil_defaultlib.B4DC
 Compiling module xil_defaultlib.WaveGen_B4DC_0_0
 Compiling module xil_defaultlib.BarGraph

@@ -107,8 +107,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="WaveGen_B4DC_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="WaveGen_xadc_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="WaveGen_B4DC_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="WaveGen_CLK_KHZ_10_50_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="WaveGen_BarGraph_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="WaveGen_ADC_Buff_0_0"/>

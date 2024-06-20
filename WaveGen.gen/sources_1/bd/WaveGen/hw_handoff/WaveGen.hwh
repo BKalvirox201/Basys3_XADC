@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 20 10:40:17 2024" VIVADOVERSION="2023.2">
+
+  <SYSTEMINFO ARCH="artix7" DEVICE="7a35t" NAME="WaveGen" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="JA4" SIGIS="undef" SIGNAME="Advanced_Timer_0_PWM_OUT">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Advanced_Timer_0" PORT="PWM_OUT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="XA1_N" SIGIS="undef" SIGNAME="External_Ports_XA1_N">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="XA1_P" SIGIS="undef" SIGNAME="External_Ports_XA1_P">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp6"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="XA2_N" SIGIS="undef" SIGNAME="External_Ports_XA2_N">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn14"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="XA2_P" SIGIS="undef" SIGNAME="External_Ports_XA2_P">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp14"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="an" RIGHT="0" SIGIS="undef" SIGNAME="Sseg_decoder_0_anode">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Sseg_decoder_0" PORT="anode"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="dclk_in"/>
+        <CONNECTION INSTANCE="CLK_KHZ_10_50_0" PORT="clk"/>
+        <CONNECTION INSTANCE="Advanced_Timer_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="14" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="BarGraph_0_led">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="BarGraph_0" PORT="led"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="6" NAME="seg" RIGHT="0" SIGIS="undef" SIGNAME="Sseg_decoder_0_led">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="Sseg_decoder_0" PORT="led"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ADC_Buff_0" HWVERSION="1.0" INSTANCE="ADC_Buff_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_Buff" VLNV="xilinx.com:module_ref:ADC_Buff:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_ADC_Buff_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_0" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_1" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_2" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_3" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_4" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_5" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_6" RIGHT="0" SIGIS="undef" SIGNAME="ADC_Buff_0_aux_data_6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Recursive_Filter_0" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_7" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_8" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_9" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_10" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_11" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_12" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_13" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_14" RIGHT="0" SIGIS="undef" SIGNAME="ADC_Buff_0_aux_data_14">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Recursive_Filter_1" PORT="data_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="aux_data_15" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="calibration" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="4" NAME="channel" RIGHT="0" SIGIS="undef" SIGNAME="xadc_wiz_0_channel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="channel_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="xadc_wiz_0_drdy_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="drdy_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="xadc_wiz_0_do_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="do_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="temperature" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="v_ref_n" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="v_ref_p" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="vcc_aux" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="vcc_bram" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="vcc_int" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="11" NAME="vp_vn" RIGHT="0" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Advanced_Timer_0" HWVERSION="1.0" INSTANCE="Advanced_Timer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Advanced_Timer" VLNV="xilinx.com:module_ref:Advanced_Timer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Period_Max" VALUE="10000"/>
+        <PARAMETER NAME="clk_divider_value" VALUE="1"/>
+        <PARAMETER NAME="prescaler_value" VALUE="250"/>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_Advanced_Timer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="PWM_OUT" SIGIS="undef" SIGNAME="Advanced_Timer_0_PWM_OUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="JA4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="auto_reload_register_value" RIGHT="0" SIGIS="undef" SIGNAME="Recursive_Filter_1_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Recursive_Filter_1" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="capture_compare_value" RIGHT="0" SIGIS="undef" SIGNAME="Recursive_Filter_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Recursive_Filter_0" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/B4DC_0" HWVERSION="1.0" INSTANCE="B4DC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="B4DC" VLNV="xilinx.com:module_ref:B4DC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_B4DC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="11" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="Recursive_Filter_1_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Recursive_Filter_1" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="hundreds" RIGHT="0" SIGIS="undef" SIGNAME="B4DC_0_hundreds">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sseg_decoder_0" PORT="hundreds"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="ones" RIGHT="0" SIGIS="undef" SIGNAME="B4DC_0_ones">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sseg_decoder_0" PORT="ones"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="tens" RIGHT="0" SIGIS="undef" SIGNAME="B4DC_0_tens">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sseg_decoder_0" PORT="tens"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="thousands" RIGHT="0" SIGIS="undef" SIGNAME="B4DC_0_thousands">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sseg_decoder_0" PORT="thousands"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/BarGraph_0" HWVERSION="1.0" INSTANCE="BarGraph_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="BarGraph" VLNV="xilinx.com:module_ref:BarGraph:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_BarGraph_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="11" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="Recursive_Filter_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Recursive_Filter_0" PORT="data_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="14" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="BarGraph_0_led">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/CLK_KHZ_10_50_0" HWVERSION="1.0" INSTANCE="CLK_KHZ_10_50_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="CLK_KHZ_10_50" VLNV="xilinx.com:module_ref:CLK_KHZ_10_50:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_CLK_KHZ_10_50_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="clk_10KHZ" SIGIS="undef" SIGNAME="CLK_KHZ_10_50_0_clk_10KHZ">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Sseg_decoder_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Recursive_Filter_0" HWVERSION="1.0" INSTANCE="Recursive_Filter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Recursive_Filter" VLNV="xilinx.com:module_ref:Recursive_Filter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Decimation" VALUE="10000"/>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_Recursive_Filter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="11" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="ADC_Buff_0_aux_data_6">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_Buff_0" PORT="aux_data_6"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="Recursive_Filter_0_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Advanced_Timer_0" PORT="capture_compare_value"/>
+            <CONNECTION INSTANCE="BarGraph_0" PORT="data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_taken" SIGIS="undef" SIGNAME="xadc_wiz_0_eoc_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="eoc_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Recursive_Filter_1" HWVERSION="1.0" INSTANCE="Recursive_Filter_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Recursive_Filter" VLNV="xilinx.com:module_ref:Recursive_Filter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Decimation" VALUE="10000"/>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_Recursive_Filter_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="11" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="ADC_Buff_0_aux_data_14">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_Buff_0" PORT="aux_data_14"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="Recursive_Filter_1_data_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Advanced_Timer_0" PORT="auto_reload_register_value"/>
+            <CONNECTION INSTANCE="B4DC_0" PORT="data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_taken" SIGIS="undef" SIGNAME="xadc_wiz_0_eoc_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="eoc_out"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Sseg_decoder_0" HWVERSION="1.0" INSTANCE="Sseg_decoder_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Sseg_decoder" VLNV="xilinx.com:module_ref:Sseg_decoder:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_Sseg_decoder_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="3" NAME="anode" RIGHT="0" SIGIS="undef" SIGNAME="Sseg_decoder_0_anode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="an"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="CLK_KHZ_10_50_0_clk_10KHZ">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="CLK_KHZ_10_50_0" PORT="clk_10KHZ"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="hundreds" RIGHT="0" SIGIS="undef" SIGNAME="B4DC_0_hundreds">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="B4DC_0" PORT="hundreds"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="6" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="Sseg_decoder_0_led">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="seg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="ones" RIGHT="0" SIGIS="undef" SIGNAME="B4DC_0_ones">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="B4DC_0" PORT="ones"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="tens" RIGHT="0" SIGIS="undef" SIGNAME="B4DC_0_tens">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="B4DC_0" PORT="tens"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="thousands" RIGHT="0" SIGIS="undef" SIGNAME="B4DC_0_thousands">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="B4DC_0" PORT="thousands"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="9" FULLNAME="/xadc_wiz_0" HWVERSION="3.3" INSTANCE="xadc_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xadc_wiz" VLNV="xilinx.com:ip:xadc_wiz:3.3">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=xadc_wiz;v=v3_3;d=pg091-xadc-wiz.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_ALARM_LIMIT_R0" VALUE="46573"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R1" VALUE="22500"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R2" VALUE="41287"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R3" VALUE="51763"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R4" VALUE="43322"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R5" VALUE="21190"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R6" VALUE="38229"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R7" VALUE="44622"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R8" VALUE="22937"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R9" VALUE="20753"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R10" VALUE="21845"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R11" VALUE="20753"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R12" VALUE="39321"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R13" VALUE="37355"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R14" VALUE="27306"/>
+        <PARAMETER NAME="C_ALARM_LIMIT_R15" VALUE="25122"/>
+        <PARAMETER NAME="C_CONFIGURATION_R0" VALUE="32768"/>
+        <PARAMETER NAME="C_CONFIGURATION_R1" VALUE="8463"/>
+        <PARAMETER NAME="C_CONFIGURATION_R2" VALUE="1024"/>
+        <PARAMETER NAME="C_DCLK_FREQUENCY" VALUE="100"/>
+        <PARAMETER NAME="C_EXTERNAL_MUXADDR_ENABLE" VALUE="0"/>
+        <PARAMETER NAME="C_EXTERNAL_MUX_CHANNEL" VALUE="VP_VN"/>
+        <PARAMETER NAME="C_FIFO_DEPTH" VALUE="7"/>
+        <PARAMETER NAME="C_HAS_AXI" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_AXI4STREAM" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_BUSY" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_CHANNEL" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_CONVST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_CONVSTCLK" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_DCLK" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_DRP" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_EOC" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_EOS" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_EXTERNAL_MUX" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_JTAGBUSY" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_JTAGLOCKED" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_JTAGMODIFIED" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_OT_ALARM" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_RESET" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_TEMP_BUS" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_USER_TEMP_ALARM" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_VBRAM_ALARM" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_VCCAUX_ALARM" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_VCCDDRO_ALARM" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_VCCINT_ALARM" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_VCCPAUX_ALARM" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_VCCPINT_ALARM" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_VN" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_VP" VALUE="1"/>
+        <PARAMETER NAME="C_INCLUDE_INTR" VALUE="1"/>
+        <PARAMETER NAME="C_SAMPLING_RATE" VALUE="961538.4615384615"/>
+        <PARAMETER NAME="C_SEQUENCE_R0" VALUE="0"/>
+        <PARAMETER NAME="C_SEQUENCE_R1" VALUE="16448"/>
+        <PARAMETER NAME="C_SEQUENCE_R2" VALUE="0"/>
+        <PARAMETER NAME="C_SEQUENCE_R3" VALUE="0"/>
+        <PARAMETER NAME="C_SEQUENCE_R4" VALUE="0"/>
+        <PARAMETER NAME="C_SEQUENCE_R5" VALUE="0"/>
+        <PARAMETER NAME="C_SEQUENCE_R6" VALUE="0"/>
+        <PARAMETER NAME="C_SEQUENCE_R7" VALUE="0"/>
+        <PARAMETER NAME="C_SIM_FILE_NAME" VALUE="ADC_Sim_Data"/>
+        <PARAMETER NAME="C_SIM_FILE_REL_PATH" VALUE="C:\Xilinx\Projects\WaveGen"/>
+        <PARAMETER NAME="C_SIM_FILE_SEL" VALUE="Relative_path"/>
+        <PARAMETER NAME="C_VAUX0" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX1" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX2" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX3" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX4" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX5" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX6" VALUE="1"/>
+        <PARAMETER NAME="C_VAUX7" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX8" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX9" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX10" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX11" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX12" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX13" VALUE="0"/>
+        <PARAMETER NAME="C_VAUX14" VALUE="1"/>
+        <PARAMETER NAME="C_VAUX15" VALUE="0"/>
+        <PARAMETER NAME="c_component_name" VALUE="WaveGen_xadc_wiz_0_0"/>
+        <PARAMETER NAME="ACQUISITION_TIME" VALUE="4"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP0_VAUXN0" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP10_VAUXN10" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP11_VAUXN11" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP12_VAUXN12" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP13_VAUXN13" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP14_VAUXN14" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP15_VAUXN15" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP1_VAUXN1" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP2_VAUXN2" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP3_VAUXN3" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP4_VAUXN4" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP5_VAUXN5" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP6_VAUXN6" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP7_VAUXN7" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP8_VAUXN8" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VAUXP9_VAUXN9" VALUE="false"/>
+        <PARAMETER NAME="ACQUISITION_TIME_VP_VN" VALUE="false"/>
+        <PARAMETER NAME="ADC_CONVERSION_RATE" VALUE="1000"/>
+        <PARAMETER NAME="ADC_OFFSET_AND_GAIN_CALIBRATION" VALUE="false"/>
+        <PARAMETER NAME="ADC_OFFSET_CALIBRATION" VALUE="false"/>
+        <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_TEMPERATURE" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP0_VAUXN0" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP10_VAUXN10" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP11_VAUXN11" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP12_VAUXN12" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP13_VAUXN13" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP14_VAUXN14" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP15_VAUXN15" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP1_VAUXN1" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP2_VAUXN2" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP3_VAUXN3" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP4_VAUXN4" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP5_VAUXN5" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP6_VAUXN6" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP7_VAUXN7" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP8_VAUXN8" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VAUXP9_VAUXN9" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VBRAM" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VCCAUX" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VCCDDRO" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VCCINT" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VCCPAUX" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VCCPINT" VALUE="false"/>
+        <PARAMETER NAME="AVERAGE_ENABLE_VP_VN" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_OPERATION" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP0_VAUXN0" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP10_VAUXN10" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP11_VAUXN11" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP12_VAUXN12" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP13_VAUXN13" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP14_VAUXN14" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP15_VAUXN15" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP1_VAUXN1" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP2_VAUXN2" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP3_VAUXN3" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP4_VAUXN4" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP5_VAUXN5" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP6_VAUXN6" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP7_VAUXN7" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP8_VAUXN8" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VAUXP9_VAUXN9" VALUE="false"/>
+        <PARAMETER NAME="BIPOLAR_VP_VN" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_AVERAGING" VALUE="None"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_CALIBRATION" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_TEMPERATURE" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP0_VAUXN0" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP10_VAUXN10" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP11_VAUXN11" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP12_VAUXN12" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP13_VAUXN13" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP14_VAUXN14" VALUE="true"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP15_VAUXN15" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP1_VAUXN1" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP2_VAUXN2" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP3_VAUXN3" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP4_VAUXN4" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP5_VAUXN5" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP6_VAUXN6" VALUE="true"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP7_VAUXN7" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP8_VAUXN8" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VAUXP9_VAUXN9" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VBRAM" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VCCAUX" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VCCDDRO" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VCCINT" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VCCPAUX" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VCCPINT" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VP_VN" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VREFN" VALUE="false"/>
+        <PARAMETER NAME="CHANNEL_ENABLE_VREFP" VALUE="false"/>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_xadc_wiz_0_0"/>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="DCLK_FREQUENCY" VALUE="100"/>
+        <PARAMETER NAME="ENABLE_AXI4STREAM" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_BUSY" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_CALIBRATION_AVERAGING" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_CHANNEL" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_CONVST" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_CONVSTCLK" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_DCLK" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_DRP" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_EOC" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_EOS" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_EXTERNAL_MUX" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_JTAGBUSY" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_JTAGLOCKED" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_JTAGMODIFIED" VALUE="true"/>
+        <PARAMETER NAME="ENABLE_JTAG_ARBITER" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_RESET" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_TEMP_BUS" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_VBRAM_ALARM" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_VCCDDRO_ALARM" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_VCCPAUX_ALARM" VALUE="false"/>
+        <PARAMETER NAME="ENABLE_VCCPINT_ALARM" VALUE="false"/>
+        <PARAMETER NAME="EXTERNAL_MUXADDR_ENABLE" VALUE="false"/>
+        <PARAMETER NAME="EXTERNAL_MUX_CHANNEL" VALUE="VP_VN"/>
+        <PARAMETER NAME="FIFO_DEPTH" VALUE="7"/>
+        <PARAMETER NAME="INCREASE_ACQUISITION_TIME" VALUE="false"/>
+        <PARAMETER NAME="INTERFACE_SELECTION" VALUE="ENABLE_DRP"/>
+        <PARAMETER NAME="NUM_WAVE" VALUE="1"/>
+        <PARAMETER NAME="OT_ALARM" VALUE="false"/>
+        <PARAMETER NAME="POWER_DOWN_ADCA" VALUE="false"/>
+        <PARAMETER NAME="POWER_DOWN_ADCB" VALUE="false"/>
+        <PARAMETER NAME="SENSOR_OFFSET_AND_GAIN_CALIBRATION" VALUE="false"/>
+        <PARAMETER NAME="SENSOR_OFFSET_CALIBRATION" VALUE="false"/>
+        <PARAMETER NAME="SEQUENCER_MODE" VALUE="Continuous"/>
+        <PARAMETER NAME="SIM_FILE_NAME" VALUE="ADC_Sim_Data"/>
+        <PARAMETER NAME="SIM_FILE_REL_PATH" VALUE="C:\Xilinx\Projects\WaveGen"/>
+        <PARAMETER NAME="SIM_FILE_SEL" VALUE="Relative_path"/>
+        <PARAMETER NAME="SINGLE_CHANNEL_ACQUISITION_TIME" VALUE="false"/>
+        <PARAMETER NAME="SINGLE_CHANNEL_ENABLE_CALIBRATION" VALUE="true"/>
+        <PARAMETER NAME="SINGLE_CHANNEL_SELECTION" VALUE="TEMPERATURE"/>
+        <PARAMETER NAME="STARTUP_CHANNEL_SELECTION" VALUE="single_channel"/>
+        <PARAMETER NAME="STIMULUS_FREQ" VALUE="1.0"/>
+        <PARAMETER NAME="TEMPERATURE_ALARM_OT_RESET" VALUE="70.0"/>
+        <PARAMETER NAME="TEMPERATURE_ALARM_OT_TRIGGER" VALUE="125.0"/>
+        <PARAMETER NAME="TEMPERATURE_ALARM_RESET" VALUE="60.0"/>
+        <PARAMETER NAME="TEMPERATURE_ALARM_TRIGGER" VALUE="85.0"/>
+        <PARAMETER NAME="TIMING_MODE" VALUE="Continuous"/>
+        <PARAMETER NAME="USER_TEMP_ALARM" VALUE="false"/>
+        <PARAMETER NAME="VBRAM_ALARM_LOWER" VALUE="0.95"/>
+        <PARAMETER NAME="VBRAM_ALARM_UPPER" VALUE="1.05"/>
+        <PARAMETER NAME="VCCAUX_ALARM" VALUE="false"/>
+        <PARAMETER NAME="VCCAUX_ALARM_LOWER" VALUE="1.75"/>
+        <PARAMETER NAME="VCCAUX_ALARM_UPPER" VALUE="1.89"/>
+        <PARAMETER NAME="VCCDDRO_ALARM_LOWER" VALUE="1.15"/>
+        <PARAMETER NAME="VCCDDRO_ALARM_UPPER" VALUE="1.25"/>
+        <PARAMETER NAME="VCCDDRO_VOLT" VALUE="1_2"/>
+        <PARAMETER NAME="VCCINT_ALARM" VALUE="false"/>
+        <PARAMETER NAME="VCCINT_ALARM_LOWER" VALUE="0.97"/>
+        <PARAMETER NAME="VCCINT_ALARM_UPPER" VALUE="1.03"/>
+        <PARAMETER NAME="VCCPAUX_ALARM_LOWER" VALUE="1.71"/>
+        <PARAMETER NAME="VCCPAUX_ALARM_UPPER" VALUE="1.8"/>
+        <PARAMETER NAME="VCCPINT_ALARM_LOWER" VALUE="0.95"/>
+        <PARAMETER NAME="VCCPINT_ALARM_UPPER" VALUE="1.00"/>
+        <PARAMETER NAME="WAVEFORM_TYPE" VALUE="CONSTANT"/>
+        <PARAMETER NAME="XADC_STARUP_SELECTION" VALUE="channel_sequencer"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="alarm_out" SIGIS="undef"/>
+        <PORT DIR="O" NAME="busy_out" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="4" NAME="channel_out" RIGHT="0" SIGIS="undef" SIGNAME="xadc_wiz_0_channel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="daddr_in"/>
+            <CONNECTION INSTANCE="ADC_Buff_0" PORT="channel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="6" NAME="daddr_in" RIGHT="0" SIGIS="undef" SIGNAME="xadc_wiz_0_channel_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="channel_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="dclk_in" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="den_in" SIGIS="undef" SIGNAME="xadc_wiz_0_eoc_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="eoc_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="di_in" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="15" NAME="do_out" RIGHT="0" SIGIS="undef" SIGNAME="xadc_wiz_0_do_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_Buff_0" PORT="data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="drdy_out" SIGIS="undef" SIGNAME="xadc_wiz_0_drdy_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ADC_Buff_0" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="dwe_in" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="eoc_out" SIGIS="undef" SIGNAME="xadc_wiz_0_eoc_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="den_in"/>
+            <CONNECTION INSTANCE="Recursive_Filter_0" PORT="s_taken"/>
+            <CONNECTION INSTANCE="Recursive_Filter_1" PORT="s_taken"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="eos_out" SIGIS="undef"/>
+        <PORT DIR="I" NAME="vauxn6" SIGIS="undef" SIGNAME="External_Ports_XA1_N">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="XA1_N"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vauxn14" SIGIS="undef" SIGNAME="External_Ports_XA2_N">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="XA2_N"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vauxp6" SIGIS="undef" SIGNAME="External_Ports_XA1_P">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="XA1_P"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vauxp14" SIGIS="undef" SIGNAME="External_Ports_XA2_P">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="XA2_P"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vn_in" SIGIS="undef"/>
+        <PORT DIR="I" NAME="vp_in" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="s_drp" TYPE="TARGET" VLNV="xilinx.com:interface:drp:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="DADDR" PHYSICAL="daddr_in"/>
+            <PORTMAP LOGICAL="DEN" PHYSICAL="den_in"/>
+            <PORTMAP LOGICAL="DI" PHYSICAL="di_in"/>
+            <PORTMAP LOGICAL="DO" PHYSICAL="do_out"/>
+            <PORTMAP LOGICAL="DRDY" PHYSICAL="drdy_out"/>
+            <PORTMAP LOGICAL="DWE" PHYSICAL="dwe_in"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="Vp_Vn" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="V_N" PHYSICAL="vn_in"/>
+            <PORTMAP LOGICAL="V_P" PHYSICAL="vp_in"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="Vaux6" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="V_N" PHYSICAL="vauxn6"/>
+            <PORTMAP LOGICAL="V_P" PHYSICAL="vauxp6"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="Vaux14" TYPE="TARGET" VLNV="xilinx.com:interface:diff_analog_io:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="V_N" PHYSICAL="vauxn14"/>
+            <PORTMAP LOGICAL="V_P" PHYSICAL="vauxp14"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="8" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="WaveGen_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xadc_wiz_0" PORT="dwe_in"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
