@@ -1,0 +1,715 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xEBFF99AA6E173D2C",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../WaveGen.gen/sources_1/bd/WaveGen",
+      "name": "WaveGen",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2"
+    },
+    "design_tree": {
+      "Sseg_decoder_0": "",
+      "xadc_wiz_0": "",
+      "xlconstant_0": "",
+      "ADC_Buff_0": "",
+      "B4DC_0": "",
+      "CLK_KHZ_10_50_0": "",
+      "BarGraph_0": "",
+      "Recursive_Filter_0": "",
+      "Recursive_Filter_1": "",
+      "Advanced_Timer_0": ""
+    },
+    "ports": {
+      "an": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "seg": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "XA1_N": {
+        "direction": "I"
+      },
+      "XA1_P": {
+        "direction": "I"
+      },
+      "led": {
+        "direction": "O",
+        "left": "14",
+        "right": "0"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          }
+        }
+      },
+      "XA2_N": {
+        "direction": "I"
+      },
+      "XA2_P": {
+        "direction": "I"
+      },
+      "JA4": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "Sseg_decoder_0": {
+        "vlnv": "xilinx.com:module_ref:Sseg_decoder:1.0",
+        "ip_revision": "1",
+        "xci_name": "WaveGen_Sseg_decoder_0_0",
+        "xci_path": "ip\\WaveGen_Sseg_decoder_0_0\\WaveGen_Sseg_decoder_0_0.xci",
+        "inst_hier_path": "Sseg_decoder_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Sseg_decoder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ones": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "tens": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "hundreds": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "thousands": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "anode": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "led": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          }
+        }
+      },
+      "xadc_wiz_0": {
+        "vlnv": "xilinx.com:ip:xadc_wiz:3.3",
+        "ip_revision": "9",
+        "xci_name": "WaveGen_xadc_wiz_0_0",
+        "xci_path": "ip\\WaveGen_xadc_wiz_0_0\\WaveGen_xadc_wiz_0_0.xci",
+        "inst_hier_path": "xadc_wiz_0",
+        "parameters": {
+          "ADC_OFFSET_AND_GAIN_CALIBRATION": {
+            "value": "false"
+          },
+          "BIPOLAR_VAUXP14_VAUXN14": {
+            "value": "false"
+          },
+          "BIPOLAR_VAUXP6_VAUXN6": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_CALIBRATION": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP12_VAUXN12": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP13_VAUXN13": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP14_VAUXN14": {
+            "value": "true"
+          },
+          "CHANNEL_ENABLE_VAUXP6_VAUXN6": {
+            "value": "true"
+          },
+          "CHANNEL_ENABLE_VAUXP7_VAUXN7": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VP_VN": {
+            "value": "false"
+          },
+          "ENABLE_CALIBRATION_AVERAGING": {
+            "value": "false"
+          },
+          "ENABLE_RESET": {
+            "value": "false"
+          },
+          "EXTERNAL_MUX_CHANNEL": {
+            "value": "VP_VN"
+          },
+          "INTERFACE_SELECTION": {
+            "value": "ENABLE_DRP"
+          },
+          "OT_ALARM": {
+            "value": "false"
+          },
+          "SENSOR_OFFSET_AND_GAIN_CALIBRATION": {
+            "value": "false"
+          },
+          "SEQUENCER_MODE": {
+            "value": "Continuous"
+          },
+          "SIM_FILE_NAME": {
+            "value": "ADC_Sim_Data"
+          },
+          "SIM_FILE_REL_PATH": {
+            "value": "C:\\Xilinx\\Projects\\WaveGen"
+          },
+          "SIM_FILE_SEL": {
+            "value": "Relative_path"
+          },
+          "SINGLE_CHANNEL_SELECTION": {
+            "value": "TEMPERATURE"
+          },
+          "TIMING_MODE": {
+            "value": "Continuous"
+          },
+          "USER_TEMP_ALARM": {
+            "value": "false"
+          },
+          "VCCAUX_ALARM": {
+            "value": "false"
+          },
+          "VCCINT_ALARM": {
+            "value": "false"
+          },
+          "XADC_STARUP_SELECTION": {
+            "value": "channel_sequencer"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
+        "xci_name": "WaveGen_xlconstant_0_0",
+        "xci_path": "ip\\WaveGen_xlconstant_0_0\\WaveGen_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "ADC_Buff_0": {
+        "vlnv": "xilinx.com:module_ref:ADC_Buff:1.0",
+        "ip_revision": "1",
+        "xci_name": "WaveGen_ADC_Buff_0_0",
+        "xci_path": "ip\\WaveGen_ADC_Buff_0_0\\WaveGen_ADC_Buff_0_0.xci",
+        "inst_hier_path": "ADC_Buff_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ADC_Buff",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "calibration": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "temperature": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "vcc_int": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "vcc_aux": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "vcc_bram": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "vp_vn": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "v_ref_p": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "v_ref_n": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_0": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_1": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_2": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_3": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_4": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_5": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_6": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_7": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_8": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_9": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_10": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_11": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_12": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_13": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_14": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "aux_data_15": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          },
+          "data": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "channel": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      },
+      "B4DC_0": {
+        "vlnv": "xilinx.com:module_ref:B4DC:1.0",
+        "ip_revision": "1",
+        "xci_name": "WaveGen_B4DC_0_0",
+        "xci_path": "ip\\WaveGen_B4DC_0_0\\WaveGen_B4DC_0_0.xci",
+        "inst_hier_path": "B4DC_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "B4DC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "ones": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "tens": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "hundreds": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "thousands": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "CLK_KHZ_10_50_0": {
+        "vlnv": "xilinx.com:module_ref:CLK_KHZ_10_50:1.0",
+        "ip_revision": "1",
+        "xci_name": "WaveGen_CLK_KHZ_10_50_0_0",
+        "xci_path": "ip\\WaveGen_CLK_KHZ_10_50_0_0\\WaveGen_CLK_KHZ_10_50_0_0.xci",
+        "inst_hier_path": "CLK_KHZ_10_50_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "CLK_KHZ_10_50",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "WaveGen_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_10KHZ": {
+            "direction": "O"
+          }
+        }
+      },
+      "BarGraph_0": {
+        "vlnv": "xilinx.com:module_ref:BarGraph:1.0",
+        "ip_revision": "1",
+        "xci_name": "WaveGen_BarGraph_0_0",
+        "xci_path": "ip\\WaveGen_BarGraph_0_0\\WaveGen_BarGraph_0_0.xci",
+        "inst_hier_path": "BarGraph_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "BarGraph",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "led": {
+            "direction": "O",
+            "left": "14",
+            "right": "0"
+          }
+        }
+      },
+      "Recursive_Filter_0": {
+        "vlnv": "xilinx.com:module_ref:Recursive_Filter:1.0",
+        "ip_revision": "1",
+        "xci_name": "WaveGen_Recursive_Filter_0_0",
+        "xci_path": "ip\\WaveGen_Recursive_Filter_0_0\\WaveGen_Recursive_Filter_0_0.xci",
+        "inst_hier_path": "Recursive_Filter_0",
+        "parameters": {
+          "Decimation": {
+            "value": "10000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Recursive_Filter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "s_taken": {
+            "direction": "I"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      },
+      "Recursive_Filter_1": {
+        "vlnv": "xilinx.com:module_ref:Recursive_Filter:1.0",
+        "ip_revision": "1",
+        "xci_name": "WaveGen_Recursive_Filter_1_0",
+        "xci_path": "ip\\WaveGen_Recursive_Filter_1_0\\WaveGen_Recursive_Filter_1_0.xci",
+        "inst_hier_path": "Recursive_Filter_1",
+        "parameters": {
+          "Decimation": {
+            "value": "10000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Recursive_Filter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data_in": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "s_taken": {
+            "direction": "I"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      },
+      "Advanced_Timer_0": {
+        "vlnv": "xilinx.com:module_ref:Advanced_Timer:1.0",
+        "ip_revision": "1",
+        "xci_name": "WaveGen_Advanced_Timer_0_0",
+        "xci_path": "ip\\WaveGen_Advanced_Timer_0_0\\WaveGen_Advanced_Timer_0_0.xci",
+        "inst_hier_path": "Advanced_Timer_0",
+        "parameters": {
+          "Period_Max": {
+            "value": "10000"
+          },
+          "clk_divider_value": {
+            "value": "1"
+          },
+          "prescaler_value": {
+            "value": "250"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Advanced_Timer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "auto_reload_register_value": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "capture_compare_value": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "PWM_OUT": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ADC_Buff_0_aux_data_14": {
+        "ports": [
+          "ADC_Buff_0/aux_data_14",
+          "Recursive_Filter_1/data_in"
+        ]
+      },
+      "Advanced_Timer_0_PWM_OUT": {
+        "ports": [
+          "Advanced_Timer_0/PWM_OUT",
+          "JA4"
+        ]
+      },
+      "B4DC_0_hundreds": {
+        "ports": [
+          "B4DC_0/hundreds",
+          "Sseg_decoder_0/hundreds"
+        ]
+      },
+      "B4DC_0_ones": {
+        "ports": [
+          "B4DC_0/ones",
+          "Sseg_decoder_0/ones"
+        ]
+      },
+      "B4DC_0_tens": {
+        "ports": [
+          "B4DC_0/tens",
+          "Sseg_decoder_0/tens"
+        ]
+      },
+      "B4DC_0_thousands": {
+        "ports": [
+          "B4DC_0/thousands",
+          "Sseg_decoder_0/thousands"
+        ]
+      },
+      "BarGraph_0_led": {
+        "ports": [
+          "BarGraph_0/led",
+          "led"
+        ]
+      },
+      "CLK_KHZ_10_50_0_clk_10KHZ": {
+        "ports": [
+          "CLK_KHZ_10_50_0/clk_10KHZ",
+          "Sseg_decoder_0/clk"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "xadc_wiz_0/eoc_out",
+          "xadc_wiz_0/den_in",
+          "Recursive_Filter_0/s_taken",
+          "Recursive_Filter_1/s_taken"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "ADC_Buff_0/aux_data_6",
+          "Recursive_Filter_0/data_in"
+        ]
+      },
+      "Recursive_Filter_0_data_out": {
+        "ports": [
+          "Recursive_Filter_0/data_out",
+          "Advanced_Timer_0/capture_compare_value",
+          "BarGraph_0/data"
+        ]
+      },
+      "Recursive_Filter_1_data_out": {
+        "ports": [
+          "Recursive_Filter_1/data_out",
+          "Advanced_Timer_0/auto_reload_register_value",
+          "B4DC_0/data"
+        ]
+      },
+      "Sseg_decoder_0_annode": {
+        "ports": [
+          "Sseg_decoder_0/anode",
+          "an"
+        ]
+      },
+      "Sseg_decoder_0_led": {
+        "ports": [
+          "Sseg_decoder_0/led",
+          "seg"
+        ]
+      },
+      "XA1_N_1": {
+        "ports": [
+          "XA1_N",
+          "xadc_wiz_0/vauxn6"
+        ]
+      },
+      "XA1_P_1": {
+        "ports": [
+          "XA1_P",
+          "xadc_wiz_0/vauxp6"
+        ]
+      },
+      "XA2_N_1": {
+        "ports": [
+          "XA2_N",
+          "xadc_wiz_0/vauxn14"
+        ]
+      },
+      "XA2_P_1": {
+        "ports": [
+          "XA2_P",
+          "xadc_wiz_0/vauxp14"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "xadc_wiz_0/dclk_in",
+          "CLK_KHZ_10_50_0/clk",
+          "Advanced_Timer_0/clk"
+        ]
+      },
+      "xadc_wiz_0_channel_out": {
+        "ports": [
+          "xadc_wiz_0/channel_out",
+          "xadc_wiz_0/daddr_in",
+          "ADC_Buff_0/channel"
+        ]
+      },
+      "xadc_wiz_0_do_out": {
+        "ports": [
+          "xadc_wiz_0/do_out",
+          "ADC_Buff_0/data"
+        ]
+      },
+      "xadc_wiz_0_drdy_out": {
+        "ports": [
+          "xadc_wiz_0/drdy_out",
+          "ADC_Buff_0/clk"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "xadc_wiz_0/dwe_in"
+        ]
+      }
+    },
+    "comments": {
+      "/": {
+        "comment_7": "0-1V"
+      }
+    }
+  }
+}

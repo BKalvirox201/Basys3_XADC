@@ -1,0 +1,93 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Wed Jun 12 09:35:27 2024
+| Host         : L0343 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file WaveGen_wrapper_control_sets_placed.rpt
+| Design       : WaveGen_wrapper
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    15 |
+|    Minimum number of control sets                        |    15 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    47 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    15 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              69 |           24 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              57 |           17 |
+| Yes          | No                    | No                     |              51 |           16 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              16 |            4 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|                    Clock Signal                   |                                Enable Signal                                |                               Set/Reset Signal                              | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG                                    |                                                                             |                                                                             |                1 |              1 |         1.00 |
+|  WaveGen_i/xadc_wiz_0/eoc_out_BUFG                |                                                                             |                                                                             |                2 |              2 |         1.00 |
+|  WaveGen_i/CLK_KHZ_10_50_0/inst/clk_10KHZ         |                                                                             |                                                                             |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                                    |                                                                             | WaveGen_i/Advanced_Timer_0/inst/timer_out[0]_i_1_n_0                        |                2 |              8 |         4.00 |
+| ~WaveGen_i/xadc_wiz_0/drdy_out                    | WaveGen_i/ADC_Buff_0/inst/aux_data_14__0_n_0                                |                                                                             |                3 |              9 |         3.00 |
+| ~WaveGen_i/xadc_wiz_0/drdy_out                    | WaveGen_i/ADC_Buff_0/inst/aux_data_6__0_n_0                                 |                                                                             |                3 |              9 |         3.00 |
+|  WaveGen_i/Recursive_Filter_0/inst/decimation_ovf |                                                                             |                                                                             |                4 |             16 |         4.00 |
+|  WaveGen_i/Recursive_Filter_1/inst/decimation_ovf |                                                                             |                                                                             |                4 |             16 |         4.00 |
+|  WaveGen_i/xadc_wiz_0/eoc_out_BUFG                |                                                                             | WaveGen_i/Recursive_Filter_0/inst/p_0_in                                    |                5 |             16 |         3.20 |
+|  WaveGen_i/xadc_wiz_0/eoc_out_BUFG                |                                                                             | WaveGen_i/Recursive_Filter_1/inst/p_0_in                                    |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                                    | WaveGen_i/Advanced_Timer_0/inst/auto_reload_register_value_buff[15]_i_1_n_0 |                                                                             |                5 |             16 |         3.20 |
+|  clk_IBUF_BUFG                                    | WaveGen_i/Advanced_Timer_0/inst/timer_out[0]_i_1_n_0                        | WaveGen_i/Advanced_Timer_0/inst/auto_reload_register_value_buff[15]_i_1_n_0 |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG                                    |                                                                             | WaveGen_i/CLK_KHZ_10_50_0/inst/clk_10KHZ_0                                  |                5 |             17 |         3.40 |
+|  clk_IBUF_BUFG                                    | WaveGen_i/Advanced_Timer_0/inst/timer_out[0]_i_1_n_0                        |                                                                             |                5 |             17 |         3.40 |
+| ~WaveGen_i/xadc_wiz_0/eoc_out_BUFG                |                                                                             |                                                                             |               12 |             32 |         2.67 |
++---------------------------------------------------+-----------------------------------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

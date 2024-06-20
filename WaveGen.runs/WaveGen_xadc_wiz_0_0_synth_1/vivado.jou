@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri May 17 09:22:06 2024
+# Process ID: 1940
+# Current directory: C:/Xilinx/Projects/WaveGen/WaveGen.runs/WaveGen_xadc_wiz_0_0_synth_1
+# Command line: vivado.exe -log WaveGen_xadc_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WaveGen_xadc_wiz_0_0.tcl
+# Log file: C:/Xilinx/Projects/WaveGen/WaveGen.runs/WaveGen_xadc_wiz_0_0_synth_1/WaveGen_xadc_wiz_0_0.vds
+# Journal file: C:/Xilinx/Projects/WaveGen/WaveGen.runs/WaveGen_xadc_wiz_0_0_synth_1\vivado.jou
+# Running On: L0343, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34109 MB
+#-----------------------------------------------------------
+source WaveGen_xadc_wiz_0_0.tcl -notrace

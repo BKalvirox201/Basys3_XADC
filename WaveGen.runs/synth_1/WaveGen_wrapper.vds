@@ -1,0 +1,313 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Jun 12 09:33:49 2024
+# Process ID: 23572
+# Current directory: C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1
+# Command line: vivado.exe -log WaveGen_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WaveGen_wrapper.tcl
+# Log file: C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/WaveGen_wrapper.vds
+# Journal file: C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1\vivado.jou
+# Running On: L0343, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 34109 MB
+#-----------------------------------------------------------
+source WaveGen_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 528.355 ; gain = 181.633
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/Xilinx/Projects/WaveGen/WaveGen.srcs/utils_1/imports/synth_1/WaveGen_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Xilinx/Projects/WaveGen/WaveGen.srcs/utils_1/imports/synth_1/WaveGen_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top WaveGen_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 26000
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1374.855 ; gain = 440.422
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_wrapper' [C:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/hdl/WaveGen_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:14]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_ADC_Buff_0_0' [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_ADC_Buff_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_ADC_Buff_0_0' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_ADC_Buff_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'calibration' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'temperature' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'vcc_int' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'vcc_aux' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'vcc_bram' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'vp_vn' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'v_ref_p' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'v_ref_n' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_0' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_1' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_2' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_3' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_4' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_5' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_7' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_8' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_9' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_10' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_11' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_12' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_13' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7071] port 'aux_data_15' of module 'WaveGen_ADC_Buff_0_0' is unconnected for instance 'ADC_Buff_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+WARNING: [Synth 8-7023] instance 'ADC_Buff_0' of module 'WaveGen_ADC_Buff_0_0' has 27 connections declared, but only 5 given [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:68]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_Advanced_Timer_0_0' [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_Advanced_Timer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_Advanced_Timer_0_0' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_Advanced_Timer_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_B4DC_0_0' [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_B4DC_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_B4DC_0_0' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_B4DC_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_BarGraph_0_0' [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_BarGraph_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_BarGraph_0_0' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_BarGraph_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_CLK_KHZ_10_50_0_0' [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_CLK_KHZ_10_50_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_CLK_KHZ_10_50_0_0' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_CLK_KHZ_10_50_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_Recursive_Filter_0_0' [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_Recursive_Filter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_Recursive_Filter_0_0' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_Recursive_Filter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_Recursive_Filter_1_0' [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_Recursive_Filter_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_Recursive_Filter_1_0' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_Recursive_Filter_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_Sseg_decoder_0_0' [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_Sseg_decoder_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_Sseg_decoder_0_0' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_Sseg_decoder_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_xadc_wiz_0_0' [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_xadc_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_xadc_wiz_0_0' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/.Xil/Vivado-23572-L0343/realtime/WaveGen_xadc_wiz_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'busy_out' of module 'WaveGen_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:107]
+WARNING: [Synth 8-7071] port 'eos_out' of module 'WaveGen_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:107]
+WARNING: [Synth 8-7071] port 'alarm_out' of module 'WaveGen_xadc_wiz_0_0' is unconnected for instance 'xadc_wiz_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:107]
+WARNING: [Synth 8-7023] instance 'xadc_wiz_0' of module 'WaveGen_xadc_wiz_0_0' has 18 connections declared, but only 15 given [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:107]
+INFO: [Synth 8-6157] synthesizing module 'WaveGen_xlconstant_0_0' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_xlconstant_0_0/synth/WaveGen_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_xlconstant_0_0' (0#1) [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_xlconstant_0_0/synth/WaveGen_xlconstant_0_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen' (0#1) [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/synth/WaveGen.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'WaveGen_wrapper' (0#1) [C:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/hdl/WaveGen_wrapper.v:13]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1481.320 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Sseg_decoder_0_0/WaveGen_Sseg_decoder_0_0/WaveGen_Sseg_decoder_0_0_in_context.xdc] for cell 'WaveGen_i/Sseg_decoder_0'
+Finished Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Sseg_decoder_0_0/WaveGen_Sseg_decoder_0_0/WaveGen_Sseg_decoder_0_0_in_context.xdc] for cell 'WaveGen_i/Sseg_decoder_0'
+Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_xadc_wiz_0_0/WaveGen_xadc_wiz_0_0/WaveGen_xadc_wiz_0_0_in_context.xdc] for cell 'WaveGen_i/xadc_wiz_0'
+Finished Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_xadc_wiz_0_0/WaveGen_xadc_wiz_0_0/WaveGen_xadc_wiz_0_0_in_context.xdc] for cell 'WaveGen_i/xadc_wiz_0'
+Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_ADC_Buff_0_0/WaveGen_ADC_Buff_0_0/WaveGen_ADC_Buff_0_0_in_context.xdc] for cell 'WaveGen_i/ADC_Buff_0'
+Finished Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_ADC_Buff_0_0/WaveGen_ADC_Buff_0_0/WaveGen_ADC_Buff_0_0_in_context.xdc] for cell 'WaveGen_i/ADC_Buff_0'
+Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_B4DC_0_0/WaveGen_B4DC_0_0/WaveGen_B4DC_0_0_in_context.xdc] for cell 'WaveGen_i/B4DC_0'
+Finished Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_B4DC_0_0/WaveGen_B4DC_0_0/WaveGen_B4DC_0_0_in_context.xdc] for cell 'WaveGen_i/B4DC_0'
+Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_CLK_KHZ_10_50_0_0/WaveGen_CLK_KHZ_10_50_0_0/WaveGen_CLK_KHZ_10_50_0_0_in_context.xdc] for cell 'WaveGen_i/CLK_KHZ_10_50_0'
+Finished Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_CLK_KHZ_10_50_0_0/WaveGen_CLK_KHZ_10_50_0_0/WaveGen_CLK_KHZ_10_50_0_0_in_context.xdc] for cell 'WaveGen_i/CLK_KHZ_10_50_0'
+Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_BarGraph_0_0/WaveGen_BarGraph_0_0/WaveGen_BarGraph_0_0_in_context.xdc] for cell 'WaveGen_i/BarGraph_0'
+Finished Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_BarGraph_0_0/WaveGen_BarGraph_0_0/WaveGen_BarGraph_0_0_in_context.xdc] for cell 'WaveGen_i/BarGraph_0'
+Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Recursive_Filter_0_0/WaveGen_Recursive_Filter_0_0/WaveGen_Recursive_Filter_0_0_in_context.xdc] for cell 'WaveGen_i/Recursive_Filter_0'
+Finished Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Recursive_Filter_0_0/WaveGen_Recursive_Filter_0_0/WaveGen_Recursive_Filter_0_0_in_context.xdc] for cell 'WaveGen_i/Recursive_Filter_0'
+Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Recursive_Filter_1_0/WaveGen_Recursive_Filter_1_0/WaveGen_Recursive_Filter_0_0_in_context.xdc] for cell 'WaveGen_i/Recursive_Filter_1'
+Finished Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Recursive_Filter_1_0/WaveGen_Recursive_Filter_1_0/WaveGen_Recursive_Filter_0_0_in_context.xdc] for cell 'WaveGen_i/Recursive_Filter_1'
+Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Advanced_Timer_0_0/WaveGen_Advanced_Timer_0_0/WaveGen_Advanced_Timer_0_0_in_context.xdc] for cell 'WaveGen_i/Advanced_Timer_0'
+Finished Parsing XDC File [c:/Xilinx/Projects/WaveGen/WaveGen.gen/sources_1/bd/WaveGen/ip/WaveGen_Advanced_Timer_0_0/WaveGen_Advanced_Timer_0_0/WaveGen_Advanced_Timer_0_0_in_context.xdc] for cell 'WaveGen_i/Advanced_Timer_0'
+Parsing XDC File [C:/Xilinx/Projects/WaveGen/Basys-3-Master.xdc]
+Finished Parsing XDC File [C:/Xilinx/Projects/WaveGen/Basys-3-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Projects/WaveGen/Basys-3-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/WaveGen_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/WaveGen_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1481.320 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1481.320 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/Sseg_decoder_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/xadc_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/ADC_Buff_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/B4DC_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/CLK_KHZ_10_50_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/BarGraph_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/Recursive_Filter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/Recursive_Filter_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for WaveGen_i/Advanced_Timer_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------+----------+
+|      |BlackBox name                |Instances |
++------+-----------------------------+----------+
+|1     |WaveGen_ADC_Buff_0_0         |         1|
+|2     |WaveGen_Advanced_Timer_0_0   |         1|
+|3     |WaveGen_B4DC_0_0             |         1|
+|4     |WaveGen_BarGraph_0_0         |         1|
+|5     |WaveGen_CLK_KHZ_10_50_0_0    |         1|
+|6     |WaveGen_Recursive_Filter_0_0 |         1|
+|7     |WaveGen_Recursive_Filter_1_0 |         1|
+|8     |WaveGen_Sseg_decoder_0_0     |         1|
+|9     |WaveGen_xadc_wiz_0_0         |         1|
++------+-----------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------+------+
+|      |Cell                       |Count |
++------+---------------------------+------+
+|1     |WaveGen_ADC_Buff_0         |     1|
+|2     |WaveGen_Advanced_Timer_0   |     1|
+|3     |WaveGen_B4DC_0             |     1|
+|4     |WaveGen_BarGraph_0         |     1|
+|5     |WaveGen_CLK_KHZ_10_50_0    |     1|
+|6     |WaveGen_Recursive_Filter_0 |     1|
+|7     |WaveGen_Recursive_Filter_1 |     1|
+|8     |WaveGen_Sseg_decoder_0     |     1|
+|9     |WaveGen_xadc_wiz_0         |     1|
+|10    |IBUF                       |     5|
+|11    |OBUF                       |    27|
++------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1481.320 ; gain = 546.887
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1481.320 ; gain = 546.887
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1481.320 ; gain = 546.887
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1489.605 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1495.262 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: e72f1e33
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 1495.262 ; gain = 954.273
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1495.262 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Xilinx/Projects/WaveGen/WaveGen.runs/synth_1/WaveGen_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file WaveGen_wrapper_utilization_synth.rpt -pb WaveGen_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 12 09:34:38 2024...

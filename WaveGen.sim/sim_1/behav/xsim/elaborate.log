@@ -1,0 +1,32 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xlconstant_v1_1_8 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot WaveGen_tb2_behav xil_defaultlib.WaveGen_tb2 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADC_Buff
+Compiling module xil_defaultlib.WaveGen_ADC_Buff_0_0
+Compiling module xil_defaultlib.B4DC
+Compiling module xil_defaultlib.WaveGen_B4DC_0_0
+Compiling module xil_defaultlib.BarGraph
+Compiling module xil_defaultlib.WaveGen_BarGraph_0_0
+Compiling module xil_defaultlib.CLK_KHZ_10_50
+Compiling module xil_defaultlib.WaveGen_CLK_KHZ_10_50_0_0
+Compiling module xil_defaultlib.Recursive_Filter(Decimation=1000...
+Compiling module xil_defaultlib.WaveGen_Recursive_Filter_0_0
+Compiling module xil_defaultlib.WaveGen_Recursive_Filter_1_0
+Compiling module xil_defaultlib.Sseg_decoder
+Compiling module xil_defaultlib.WaveGen_Sseg_decoder_0_0
+Compiling module unisims_ver.XADC(INIT_40=16'b100000000000000...
+Compiling module xil_defaultlib.WaveGen_xadc_wiz_0_0
+Compiling module xlconstant_v1_1_8.xlconstant_v1_1_8_xlconstant(CON...
+Compiling module xil_defaultlib.WaveGen_xlconstant_0_0
+Compiling module xil_defaultlib.WaveGen
+Compiling module xil_defaultlib.WaveGen_tb2
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot WaveGen_tb2_behav

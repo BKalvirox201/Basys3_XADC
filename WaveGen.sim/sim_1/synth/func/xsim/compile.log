@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Xilinx/Projects/WaveGen/WaveGen.sim/sim_1/synth/func/xsim/WaveGen_wrapper_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module WaveGen
+INFO: [VRFC 10-311] analyzing module WaveGen_ADC_Buff_0_0
+INFO: [VRFC 10-311] analyzing module WaveGen_ADC_Buff_0_0_ADC_Buff
+INFO: [VRFC 10-311] analyzing module WaveGen_B4DC_0_0
+INFO: [VRFC 10-311] analyzing module WaveGen_BarGraph_0_0
+INFO: [VRFC 10-311] analyzing module WaveGen_BarGraph_0_0_BarGraph
+INFO: [VRFC 10-311] analyzing module WaveGen_CLK_KHZ_10_50_0_0
+INFO: [VRFC 10-311] analyzing module WaveGen_CLK_KHZ_10_50_0_0_CLK_KHZ_10_50
+INFO: [VRFC 10-311] analyzing module WaveGen_Sseg_decoder_0_0
+INFO: [VRFC 10-311] analyzing module WaveGen_Sseg_decoder_0_0_Sseg_decoder
+INFO: [VRFC 10-311] analyzing module WaveGen_wrapper
+INFO: [VRFC 10-311] analyzing module WaveGen_xadc_wiz_0_0
+INFO: [VRFC 10-311] analyzing module glbl
