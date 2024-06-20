@@ -8,6 +8,7 @@ The idea for this is a digital logic circuit implemented in an FPGA that produce
 <p align="center">
     <img src="[](https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/Cir_Concept.png)">
 </p>
+
 ![Circuit_Concept_Image](https://github.com/BKalvirox201/Basys3_XADC/blob/main/Images/Cir_Concept.png)
 
 
